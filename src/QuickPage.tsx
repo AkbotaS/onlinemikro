@@ -1,0 +1,11 @@
+import {ArrowLeft,ArrowRight,CheckSquare,FlaskConical,Microscope,Sparkles} from 'lucide-react';
+
+type Props={mode:'tasks'|'assistant';onBack:()=>void;onWork:()=>void;onWorkTwo:()=>void;onMicroscope:()=>void};
+export default function QuickPage({mode,onBack,onWork,onWorkTwo,onMicroscope}:Props){
+ const tasks=mode==='tasks';
+ return <section className="quick-page">
+  <button className="back-button" onClick={onBack}><ArrowLeft size={16}/>Басты бетке оралу</button>
+  <div className="quick-page-heading"><span className="quick-page-icon">{tasks?<CheckSquare size={25}/>:<Sparkles size={25}/>}</span><div><span className="kicker"><span/>{tasks?'ОҚУ ТАПСЫРМАЛАРЫ':'ВИРТУАЛДЫ КӨМЕКШІ'}</span><h1>{tasks?'Тапсырмалар':'Жи-көмекші'}</h1><p>{tasks?'Қолжетімді зертханалық жұмысты таңдап, орындауды бастаңыз.':'Микроскоп пен микробиология зертханасымен танысуды осы жерден жалғастырыңыз.'}</p></div></div>
+  {tasks?<div className="quick-task-list"><article className="quick-task-card"><span className="quick-task-number">01</span><div className="quick-task-copy"><small>МИКРОБИОЛОГИЯ · 30 МИНУТ</small><h2>Ауыз қуысындағы микрофлораны қарау</h2><p>Оқу препаратын микроскоппен бақылап, байқалған пішіндерді сипаттаңыз.</p></div><button className="rail-cta" onClick={onWork}>Жұмысты бастау <ArrowRight size={15}/></button></article><article className="quick-task-card"><span className="quick-task-number">02</span><div className="quick-task-copy"><small>БАКТЕРИЯ МОРФОЛОГИЯСЫ · ТЕОРИЯ + ПРАКТИКА</small><h2>Микроорганизмдердің жіктелуі мен жүйеленуі</h2><p>Жұғын дайындау, қарапайым бояу және микроскоптау техникасы.</p></div><button className="rail-cta" onClick={onWorkTwo}>Жұмысты бастау <ArrowRight size={15}/></button></article></div>:<article className="quick-assistant-card"><div className="assistant-glow"><Sparkles size={35}/></div><div><h2>Қадамдап зерттеңіз</h2><p>Қазір екі зертханалық сабақ пен виртуалды микроскоп қолжетімді. Қажетті бөлімді ашып, жұмысты орындаудан бастаңыз.</p><div className="quick-actions"><button className="rail-cta" onClick={onWork}><FlaskConical size={15}/>Зертханалық жұмыс<ArrowRight size={15}/></button><button className="outline-button" onClick={onMicroscope}><Microscope size={15}/>Микроскопты ашу</button></div></div></article>}
+ </section>
+}
