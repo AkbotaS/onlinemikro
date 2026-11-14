@@ -24,7 +24,6 @@ const cards:[Destination,string,string,typeof FlaskConical,string][]=[
    <section className="home-shortcuts" aria-label={t("Зертхана бөлімдері")}>
     {cards.map(([target,title,subtitle,Icon])=><button className="home-shortcut-card" key={target} aria-label={`${title}: ${subtitle}`} onClick={()=>onOpen(target)}><span className="shortcut-icon"><Icon size={55} strokeWidth={1.8}/></span><b>{title}</b><span className="shortcut-arrow"><ArrowRight size={23}/></span></button>)}
    </section>
-   <div className="home-footer-note"><span className="live-dot"/>{t("Оқу ортасы дайын")} <span>{t("2 зертханалық сабақ қолжетімді")}</span></div>
   </div>
  </div>
 }

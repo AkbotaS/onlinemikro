@@ -1,6 +1,6 @@
 import {useLanguage} from './LanguageContext';
 import {useState} from 'react';
-import {ArrowLeft,ArrowRight,BookOpen,Check,CheckCircle2,ChevronDown,ClipboardList,Microscope,ShieldCheck} from 'lucide-react';
+import {ArrowLeft,ArrowRight,BookOpen,Check,ChevronDown,ClipboardList,Microscope,ShieldCheck} from 'lucide-react';
 
 type Props={onBack:()=>void;onMicroscope:()=>void};
 type Section='overview'|'questions'|'practice'|'record';
@@ -27,7 +27,7 @@ const groups=[
  const toggleDone=(n:number)=>setDone(v=>v.map((x,i)=>i===n?!x:x));
  return <section className="content-page lesson-two-page">
   <button className="back-link" onClick={onBack}><ArrowLeft size={15}/>{t("Зертханалық жұмыстар")}</button>
-  <div className="page-title lesson-two-title"><div><div className="kicker"><span/>{t("ЗЕРТХАНАЛЫҚ САБАҚ · 02")}</div><h1>{t("Микроорганизмдердің жіктелуі мен жүйеленуі. Жұғын дайындау техникасы. Қарапайым бояу. Микроскоптау техникасы")}</h1><p>{t("Микробиологиялық зертхана ережелері, бактерия морфологиясы және микроскоппен бақылау негіздері.")}</p></div><span className="lab-meta-tag">{t("Сабақ №2 · Теория және практика")}</span></div>
+  <div className="page-title lesson-two-title"><div><div className="kicker"><span/>{t("ЗЕРТХАНАЛЫҚ САБАҚ · 02")}</div><h1>{t("Микроорганизмдердің жіктелуі мен жүйеленуі. Жұғын дайындау техникасы. Қарапайым бояу. Микроскоптау техникасы")}</h1><p>{t("Микробиологиялық зертхана ережелері, бактерия морфологиясы және микроскоппен бақылау негіздері.")}</p></div></div>
   <div className="lesson-two-objective"><BookOpen size={19}/><div><b>{t("Сабақтың мақсаты")}</b><p>{t("Микробиологиялық зертханада қауіпсіз жұмыс істеу ережелерін және зертханаішілік жұқтырудың алдын алу қағидаларын түсіну; жұғын-препаратты дайындау, қарапайым бояу және микроскоптау әдістерімен танысу.")}</p></div></div>
   <nav className="lesson-two-tabs" aria-label={t("Сабақ бөлімдері")}>{([['overview',t("Сабақ мазмұны")],['questions',t("Өзіндік сұрақтар")],['practice',t("Практикалық бөлім")],['record',t("Бақылау кестесі")]] as [Section,string][]).map(([id,label])=><button key={id} className={section===id?'active':''} onClick={()=>setSection(id)}>{label}</button>)}</nav>
   {section==='overview'&&<div className="lesson-two-grid">
@@ -41,6 +41,6 @@ const groups=[
    <div className="lesson-safety lesson-safety-wide"><ShieldCheck size={17}/><span><b>{t("Маңызды:")}</b> {t("бұл сабақта тірі дақыл өсіру қарастырылмайды. Белгісіз биологиялық материалмен жұмыс істемеңіз; бекітілген оқу препаратын және зертхана нұсқаушысын пайдаланыңыз.")}</span></div>
   </div>}
   {section==='record'&&<article className="lesson-two-card lesson-record-card"><div className="lesson-two-card-head"><span className="lesson-icon"><ClipboardList size={17}/></span><h2>{t("Бақылау нәтижелері")}</h2></div><p className="lesson-intro">{t("Әр жолға микроскоптан нақты байқаған белгілерді қысқаша жазыңыз.")}</p><div className="lesson-table-wrap"><table className="lesson-record-table"><thead><tr><th>№</th><th>{t("Зерттеу мақсаты")}</th><th>{t("Зерттелетін материал")}</th><th>{t("Зерттеу барысы")}</th><th>{t("Қорытынды")}</th></tr></thead><tbody><tr><td>1</td><td>{t("Тіс қабатындағы микрофлора пішіндерін анықтау")}</td><td>{t("Дайын тіс қабаты жұғын-препараты")}</td><td>{t("Қарапайым бояу · микроскопия")}</td><td><input value={observation} onChange={e=>setObservation(e.target.value)} placeholder={t("Пішіні, орналасуы…")}/></td></tr><tr><td>2</td><td>{t("Бактерия пішіндерін салыстыру")}</td><td>{t("Демонстрациялық препараттар: шар, таяқша, иілген")}</td><td>{t("Микроскопия · сызба")}</td><td><input value={conclusion} onChange={e=>setConclusion(e.target.value)} placeholder={t("Байқалған айырмашылық…")}/></td></tr></tbody></table></div><div className="record-progress"><span>{done.filter(Boolean).length} {t("/ 3 пішін белгіленді")}</span><span>{observation||conclusion?t("Жазбалар енгізілуде"):t("Жазбалар әлі енгізілмеді")}</span></div></article>}
-  <div className="lesson-two-bottom"><button className="outline-button" onClick={onBack}><ArrowLeft size={15}/>{t("Тізімге оралу")}</button><span><CheckCircle2 size={15}/>{t("Оқу материалы · №2")}</span><button className="primary-button" onClick={()=>setSection(section==='overview'?'questions':section==='questions'?'practice':section==='practice'?'record':'overview')}>{t("Келесі бөлім")}<ArrowRight size={15}/></button></div>
+  <div className="lesson-two-bottom"><button className="outline-button" onClick={onBack}><ArrowLeft size={15}/>{t("Тізімге оралу")}</button><button className="primary-button" onClick={()=>setSection(section==='overview'?'questions':section==='questions'?'practice':section==='practice'?'record':'overview')}>{t("Келесі бөлім")}<ArrowRight size={15}/></button></div>
  </section>
 }
