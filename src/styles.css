@@ -234,3 +234,37 @@ body{min-width:0}
 
 .home-search{min-width:0;flex:0 1 620px}.home-top-actions{flex:none}
 @media(min-width:761px) and (max-width:1100px){.home-top-actions{gap:10px}.home-topbar{padding-left:18px;padding-right:18px}}
+/* Quiet study surfaces and predictable reading widths. */
+.study-page{max-width:1040px;margin:0 auto;padding:32px clamp(16px,3vw,40px);color:#233c50;min-width:0}
+.study-page h1{font-size:28px;margin:0 0 24px;font-weight:700;line-height:1.25}
+.study-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+.study-heading h1{margin:0}
+.study-card{min-width:0;margin:0 0 18px;padding:22px;border:1px solid #dbe3e8;border-radius:10px;background:white}
+.study-card h2{font-size:20px;margin:8px 0 16px;line-height:1.4}.study-card h3{font-size:16px;margin-top:20px}
+.study-card p{font-size:16px;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere;color:#435b6b}
+.study-card legend{font-size:17px;font-weight:650;padding:0 6px;max-width:100%}
+.study-card summary{font-size:17px;cursor:pointer;font-weight:600;line-height:1.5}
+.study-note{font-size:14px;line-height:1.65;color:#596e7c;margin:12px 0 20px}
+.study-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:18px 0}
+.study-actions button,.study-heading button,.study-card>button{min-height:42px;padding:10px 16px;width:auto}
+.practice-option{display:flex;align-items:center;gap:12px;padding:12px 0;font-size:16px;line-height:1.4;cursor:pointer}
+.practice-option input{flex:none;width:18px;height:18px;accent-color:#256b94}
+.storage-warning{padding:12px 20px;background:#fff2d5;color:#694e18;font-size:15px}
+.home-app .lab-sidebar{background:#173b58;box-shadow:none}.home-app .side-link{border:0;background:transparent;border-radius:7px;min-height:56px}
+.home-app .side-link.active{background:#ffffff17;box-shadow:inset 2px 0 #9fc9de}
+.home-shortcut-card{box-shadow:none;background:#fff;border-radius:10px;min-height:180px}
+.shortcut-icon{filter:none}.home-shortcut-card .shortcut-icon svg{width:34px;height:34px}
+.home-shortcut-card .shortcut-arrow{display:none}.home-hero{background:#eaf1f6}.hero-copy h1{white-space:normal}
+.hero-open-lab{position:relative;z-index:4;font-size:15px;background:#fff;border-color:#aac2d2;min-height:44px;white-space:normal;text-align:left}
+.home-route-content .experiment-card,.home-route-content .question-card,.home-route-content .theory-card{box-shadow:none}
+.home-route-content .primary-button,.primary-button{background:#256b94;border-radius:6px}
+.experiment-page .study-note{padding:0 16px}.experiment-aside .study-note{padding:0}
+.journal-entry-card small{font-size:14px;color:#607681}
+@media(max-width:760px){.home-app .side-link{min-height:42px}.study-page{padding:24px 16px}.study-card{padding:16px}.study-page h1{font-size:24px}.home-shortcut-card{min-height:150px}.hero-copy{max-width:100%}.hero-copy h1{font-size:32px}}
+@media print{.lab-sidebar,.home-topbar,.journal-page button,.journal-page>.study-note{display:none!important}.home-app,.home-shell-main{display:block!important;background:white!important;width:100%!important;max-width:none!important}.study-page{padding:0;max-width:none}.journal-entry-card{break-inside:avoid;box-shadow:none}.journal-entry-card p{color:#000}.study-heading{margin-bottom:24px}}
+.cell-sample.model-cocci .oral-cell{width:38px;height:38px;border-radius:50%;background:#b8a6c9;border:2px solid #77608e;box-shadow:none;transform:none}
+.cell-sample.model-rods .oral-cell{width:25px;height:80px;border-radius:14px;background:#b8a6c9;border:2px solid #77608e;box-shadow:none;transform:rotate(25deg)}
+.cell-sample.model-cocci .oral-cell b,.cell-sample.model-cocci .oral-cell em,.cell-sample.model-rods .oral-cell b,.cell-sample.model-rods .oral-cell em{display:none}
+.scope-controls,.scope-view,.control-box{min-width:0}.sample-choice{white-space:normal;text-align:left;gap:10px}
+@media(max-width:430px){.scope-controls{grid-template-columns:minmax(0,1fr)}.scope-top{gap:12px}.scope-top>div{min-width:0}.scope-top small{overflow-wrap:anywhere}}
+.hero-open-lab{display:flex}
