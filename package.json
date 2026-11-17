@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "scripts": { "dev": "vite --host 0.0.0.0", "build": "tsc -b && vite build", "preview": "vite preview --host 0.0.0.0" },
+  "scripts": { "dev": "vite --host 0.0.0.0", "build": "tsc -b && vite build", "preview": "vite preview --host 0.0.0.0", "sync-and-build": "node scripts/sync-and-build.mjs", "test:sync": "node --test scripts/sync-and-build.test.mjs" },
   "dependencies": { "react": "latest", "react-dom": "latest", "three": "latest", "lucide-react": "latest" },
   "devDependencies": { "@tailwindcss/vite": "latest", "@vitejs/plugin-react": "latest", "@types/react": "latest", "@types/react-dom": "latest", "@types/three": "latest", "tailwindcss": "latest", "typescript": "latest", "vite": "latest" }
 }

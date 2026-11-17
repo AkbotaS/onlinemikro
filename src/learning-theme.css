@@ -1,0 +1,523 @@
+/* Shared learning surfaces continue the home laboratory's green and cream palette. */
+.home-app {
+ --lab-bg: #f5f5ef;
+ --lab-surface: #fafbf6;
+ --lab-surface-soft: #edf2e6;
+ --lab-line: #dce4d5;
+ --lab-text: #294b3d;
+ --lab-muted: #697d64;
+ --lab-green: #4c7050;
+ --lab-green-strong: #315b43;
+}
+
+.home-app .home-route-content {
+ max-width: 1420px;
+ min-width: 0;
+ padding: 30px clamp(18px, 3vw, 48px) 48px;
+ color: var(--lab-text);
+ background: var(--lab-bg);
+}
+.home-app .home-route-content .content-page {
+ width: 100%;
+ max-width: 1180px;
+ min-width: 0;
+ margin: 0 auto;
+ padding-top: 3px;
+}
+.home-app .home-route-content .page-title {
+ align-items: flex-start;
+ gap: 22px;
+ margin-bottom: 26px;
+}
+.home-app .home-route-content .page-title > div { min-width: 0; }
+.home-app .home-route-content .page-title h1,
+.home-app .home-route-content .scope-headline h1 {
+ color: var(--lab-text);
+ font: 600 clamp(25px, 2.6vw, 36px)/1.3 'Manrope', Arial, sans-serif;
+ letter-spacing: -.8px;
+ margin: 12px 0;
+ overflow-wrap: anywhere;
+}
+.home-app .home-route-content .page-title p,
+.home-app .home-route-content .scope-headline > p {
+ max-width: 760px;
+ margin: 0;
+ color: var(--lab-muted);
+ font-size: 13px;
+ line-height: 1.8;
+}
+.home-app .home-route-content .kicker,
+.home-app .quick-page .kicker,
+.home-app .home-route-content .overline {
+ color: #718368;
+ font-size: 10px;
+ line-height: 1.6;
+ letter-spacing: 1.35px;
+}
+.home-app .home-route-content .kicker > span,
+.home-app .quick-page .kicker > span { background: #8fa381; }
+.home-app .home-route-content .back-link,
+.home-app .home-route-content .back-button,
+.home-app .quick-page .back-button {
+ min-height: 36px;
+ padding: 6px 0;
+ gap: 8px;
+ color: var(--lab-muted);
+ font-size: 12px;
+ line-height: 1.5;
+}
+.home-app .home-route-content .back-link:hover,
+.home-app .home-route-content .back-button:hover,
+.home-app .quick-page .back-button:hover { color: var(--lab-green-strong); }
+.home-app .home-route-content .lab-meta-tag {
+ display: inline-flex;
+ flex: none;
+ max-width: 100%;
+ margin-top: 8px;
+ padding: 9px 12px;
+ border: 1px solid var(--lab-line);
+ border-radius: 7px;
+ background: var(--lab-surface);
+ color: var(--lab-muted);
+ font-size: 11px;
+ line-height: 1.5;
+ white-space: normal;
+}
+
+/* One consistent control vocabulary across lessons, tasks, and the microscope. */
+.home-app .home-route-content .primary-button,
+.home-app .quick-page .rail-cta {
+ min-height: 42px;
+ padding: 11px 16px;
+ border: 1px solid var(--lab-green-strong);
+ border-radius: 8px;
+ background: var(--lab-green-strong);
+ color: #fff;
+ font-size: 12px;
+ font-weight: 600;
+ line-height: 1.5;
+ box-shadow: none;
+}
+.home-app .home-route-content .primary-button:hover,
+.home-app .quick-page .rail-cta:hover { background: #274c37; transform: none; filter: none; }
+.home-app .home-route-content .outline-button,
+.home-app .quick-page .outline-button {
+ min-height: 40px;
+ padding: 9px 13px;
+ gap: 8px;
+ border: 1px solid #cbd9c2;
+ border-radius: 8px;
+ background: var(--lab-surface);
+ color: var(--lab-green);
+ font-size: 12px;
+ line-height: 1.5;
+}
+.home-app .home-route-content .outline-button:hover,
+.home-app .quick-page .outline-button:hover { background: var(--lab-surface-soft); border-color: #a7bd9a; }
+.home-app .home-route-content button:disabled { opacity: .5; }
+.home-app .home-route-content button > svg,
+.home-app .quick-page button > svg { flex-shrink: 0; }
+.home-app .home-route-content button:focus-visible,
+.home-app .home-route-content input:focus-visible,
+.home-app .home-route-content textarea:focus-visible,
+.home-app .home-route-content summary:focus-visible,
+.home-app .quick-page button:focus-visible {
+ outline: 2px solid #6f935f;
+ outline-offset: 3px;
+}
+
+/* Laboratory work folders. */
+.home-app .home-route-content .lab1-card {
+ display: grid;
+ grid-template-columns: minmax(180px, 230px) minmax(0, 1fr);
+ width: 100%;
+ max-width: 100%;
+ margin: 0 0 18px;
+ overflow: hidden;
+ border: 1px solid var(--lab-line);
+ border-radius: 13px;
+ background: var(--lab-surface);
+ color: var(--lab-text);
+ box-shadow: 0 5px 20px #243e2d05;
+}
+.home-app .home-route-content .lab1-card:hover {
+ transform: translateY(-2px);
+ border-color: #a8bd9d;
+ box-shadow: 0 8px 25px #243e2d0c;
+}
+.home-app .home-route-content .lab1-card .course-visual {
+ width: 100%;
+ height: 100%;
+ min-height: 220px;
+ background: linear-gradient(145deg, #e6eddf, #d5dfcc);
+}
+.home-app .home-route-content .lab2-card .course-visual { background: linear-gradient(145deg, #e6ebe0, #d9e2d3); }
+.home-app .home-route-content .course-visual::before {
+ width: 80px;
+ height: 106px;
+ border: 1px solid #b6c5aa;
+ border-radius: 6px;
+ background: repeating-linear-gradient(transparent 0 15px, #a7b99a40 15px 16px), #f9faf3;
+ box-shadow: -7px 7px 0 #e8eede, -8px 8px 0 1px #bac9ae, 0 6px 15px #49643a10;
+ transform: rotate(-8deg);
+}
+.home-app .home-route-content .lab2-card .course-visual::before { transform: rotate(7deg); }
+.home-app .home-route-content .course-visual-icon { color: #5e7b50; font-size: 35px; }
+.home-app .home-route-content .course-index {
+ top: 16px;
+ right: 16px;
+ color: #69805d;
+ font-size: 12px;
+}
+.home-app .home-route-content .course-subtitle {
+ right: 12px;
+ bottom: 15px;
+ left: 15px;
+ color: #637b59;
+ font-size: 9px;
+ line-height: 1.5;
+ letter-spacing: .8px;
+}
+.home-app .home-route-content .lab1-card .course-body { min-width: 0; padding: 25px 27px; }
+.home-app .home-route-content .course-meta { flex-wrap: wrap; gap: 9px; color: var(--lab-muted); }
+.home-app .home-route-content .course-meta > span:first-child { color: var(--lab-muted); font-size: 11px; }
+.home-app .home-route-content .level-tag { padding: 5px 8px; color: #57764a; background: #eaf0e2; font-size: 10px; }
+.home-app .home-route-content .course-body h3 { color: var(--lab-text); font-size: 19px; font-weight: 600; line-height: 1.5; margin: 16px 0 8px; }
+.home-app .home-route-content .course-body p { min-height: 0; color: var(--lab-muted); font-size: 13px; line-height: 1.75; }
+.home-app .home-route-content .course-bottom { gap: 12px; margin-top: 20px; padding-top: 15px; border-color: var(--lab-line); color: var(--lab-muted); font-size: 11px; }
+.home-app .home-route-content .circle-arrow { width: 29px; height: 29px; flex: none; border-color: #cbd9c1; color: var(--lab-green); background: #edf2e6; }
+.home-app .home-route-content .page-footnote { color: var(--lab-muted); font-size: 11px; line-height: 1.7; }
+
+/* Optical controls frame the existing specimen without recoloring its cells. */
+.home-app .home-route-content .scope-placeholder { width: 100%; max-width: 1180px; min-width: 0; margin: 0 auto 30px; }
+.home-app .home-route-content .scope-headline { margin-bottom: 25px; }
+.home-app .home-route-content .scope-headline h1 em { color: var(--lab-green); }
+.home-app .home-route-content .scope-workspace { grid-template-columns: minmax(0, 1fr) 290px; align-items: start; gap: 20px; }
+.home-app .home-route-content .scope-view,
+.home-app .home-route-content .control-box { min-width: 0; padding: 20px; border: 1px solid var(--lab-line); border-radius: 12px; background: var(--lab-surface); box-shadow: none; }
+.home-app .home-route-content .scope-top { gap: 14px; padding-bottom: 17px; }
+.home-app .home-route-content .scope-top > div { min-width: 0; gap: 7px; }
+.home-app .home-route-content .scope-top b { color: var(--lab-text); font-size: 13px; font-weight: 600; }
+.home-app .home-route-content .scope-top small { color: var(--lab-muted); font-size: 9px; line-height: 1.6; letter-spacing: .5px; }
+.home-app .home-route-content .scope-top strong { flex: none; color: var(--lab-green); font-size: 22px; }
+.home-app .home-route-content .scope-window { height: clamp(300px, 32vw, 430px); border: 6px solid #2f4c40; border-radius: 9px; background: radial-gradient(circle, #416154, #1b352b 75%); }
+.home-app .home-route-content .scope-hint { align-items: flex-start; padding: 15px 0 0; color: var(--lab-muted); font-size: 11px; line-height: 1.7; }
+.home-app .home-route-content .scope-hint svg { flex: none; margin-top: 2px; }
+.home-app .home-route-content .scope-controls { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.home-app .home-route-content .control-box label { margin: 0 0 10px; color: var(--lab-muted); font-size: 11px; }
+.home-app .home-route-content .objective-picker { flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+.home-app .home-route-content .objective-picker button { min-height: 34px; padding: 7px 10px; border: 1px solid var(--lab-line); border-radius: 6px; background: var(--lab-surface); color: var(--lab-muted); font-size: 12px; }
+.home-app .home-route-content .objective-picker button.on { border-color: #a7bd98; background: #e9f0df; color: var(--lab-green-strong); }
+.home-app .home-route-content .range-label { gap: 10px; color: var(--lab-muted); font-size: 11px; }
+.home-app .home-route-content .range-label b { color: var(--lab-green); }
+.home-app .home-route-content .control-box input[type=range] { min-height: 26px; accent-color: var(--lab-green); margin: 5px 0 13px; }
+.home-app .home-route-content .sample-choice { gap: 10px; margin: 6px 0; padding: 11px; border-color: var(--lab-line); border-radius: 7px; background: var(--lab-surface-soft); color: var(--lab-green); font-size: 12px; line-height: 1.6; }
+.home-app .home-route-content .sample-choice svg { flex: none; margin-top: 3px; }
+.home-app .home-route-content .total-magnification { align-items: center; gap: 10px; margin-top: 15px; padding-top: 15px; border-color: var(--lab-line); color: var(--lab-muted); font-size: 11px; }
+.home-app .home-route-content .total-magnification b { color: var(--lab-green-strong); font-size: 19px; }
+.home-app .home-route-content .sample-note { padding: 2px 5px; color: var(--lab-muted); font-size: 11px; line-height: 1.8; }
+.home-app .home-route-content .oil-alert { border-color: #e4d7ac; background: #fbf5e6; border-radius: 8px; padding: 12px; gap: 7px; }
+.home-app .home-route-content .oil-alert b { font-size: 11px; color: #7d612c; }
+.home-app .home-route-content .oil-alert span { font-size: 11px; line-height: 1.7; color: #816f48; }
+
+/* Work one: procedure, notes, and assessment. */
+.home-app .home-route-content .experiment-page .page-title h1 { max-width: 850px; font-size: clamp(24px, 2.4vw, 32px); }
+.home-app .home-route-content .safety-card { padding: 16px 19px; margin: 0 0 22px; border-color: #e5d9b5; border-radius: 10px; background: #faf5e8; }
+.home-app .home-route-content .safety-card b { color: #7b652f; font-size: 12px; }
+.home-app .home-route-content .safety-card p { margin-top: 7px; color: #7d704f; font-size: 12px; line-height: 1.8; }
+.home-app .home-route-content .experiment-grid { grid-template-columns: minmax(0, 1.45fr) minmax(270px, .9fr); gap: 20px; }
+.home-app .home-route-content .experiment-main,
+.home-app .home-route-content .experiment-aside { min-width: 0; gap: 18px; }
+.home-app .home-route-content .experiment-card,
+.home-app .home-route-content .question-card,
+.home-app .home-route-content .theory-card { min-width: 0; padding: 22px; border: 1px solid var(--lab-line); border-radius: 12px; background: var(--lab-surface); box-shadow: none; }
+.home-app .home-route-content .step-count { color: var(--lab-green); font-size: 10px; letter-spacing: 1px; }
+.home-app .home-route-content .experiment-progress { width: 100px; max-width: 35%; height: 5px; background: #e0e8d7; }
+.home-app .home-route-content .experiment-progress i { background: #809c69; }
+.home-app .home-route-content .experiment-card-body { gap: 15px; padding: 30px 0; }
+.home-app .home-route-content .large-step-icon,
+.home-app .home-route-content .control-small-icon { background: var(--lab-surface-soft); color: #6a8559; }
+.home-app .home-route-content .large-step-icon { width: 43px; height: 43px; border: 1px solid var(--lab-line); border-radius: 11px; }
+.home-app .home-route-content .experiment-card-body h2 { color: var(--lab-text); font-size: 19px; font-weight: 600; line-height: 1.6; }
+.home-app .home-route-content .experiment-card-body p,
+.home-app .home-route-content .theory-card > p { color: var(--lab-muted); font-size: 12px; line-height: 1.85; }
+.home-app .home-route-content .experiment-card-foot { gap: 15px; padding-top: 17px; border-color: var(--lab-line); }
+.home-app .home-route-content .text-action { gap: 5px; min-height: 36px; color: var(--lab-muted); font-size: 11px; line-height: 1.5; text-align: left; }
+.home-app .home-route-content .question-card h3 { color: var(--lab-text); font-size: 16px; font-weight: 600; line-height: 1.6; margin-bottom: 16px; }
+.home-app .home-route-content .answer-list { gap: 9px; }
+.home-app .home-route-content .answer-option { gap: 11px; min-height: 45px; padding: 10px; border-color: var(--lab-line); border-radius: 7px; background: var(--lab-surface); color: var(--lab-muted); font-size: 12px; line-height: 1.6; }
+.home-app .home-route-content .answer-option > span { width: 25px; height: 25px; flex: none; background: #edf2e6; color: var(--lab-green); font-size: 10px; }
+.home-app .home-route-content .answer-option.selected { border-color: #a7bd98; background: #eef4e7; color: var(--lab-green-strong); }
+.home-app .home-route-content .answer-option.answer-correct { border-color: #91bca2; background: #edf6ed; color: #376b43; }
+.home-app .home-route-content .answer-option.answer-wrong { border-color: #d8aba1; background: #fcf0ec; color: #9a5647; }
+.home-app .home-route-content .question-foot { flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.home-app .home-route-content .question-foot > span { color: var(--lab-muted); font-size: 11px; line-height: 1.6; }
+.home-app .home-route-content .info-heading { gap: 10px; }
+.home-app .home-route-content .info-heading b { color: var(--lab-text); font-size: 13px; font-weight: 600; }
+.home-app .home-route-content .info-heading .control-small-icon { flex: none; width: 30px; height: 30px; border: 1px solid var(--lab-line); border-radius: 8px; }
+.home-app .home-route-content .info-heading.compact { margin-top: 20px; }
+.home-app .home-route-content .lab-tool-checks { gap: 7px; margin-top: 16px; }
+.home-app .home-route-content .lab-tool-checks label { min-width: 0; gap: 7px; min-height: 43px; padding: 8px; border-color: var(--lab-line); border-radius: 7px; background: #f6f8f0; color: var(--lab-muted); font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
+.home-app .home-route-content .lab-tool-checks label:has(input:checked) { border-color: #b0c49f; background: #ebf2e2; color: var(--lab-green-strong); }
+.home-app .home-route-content .lab-tool-checks input { flex: none; accent-color: var(--lab-green); }
+.home-app .home-route-content .lab-tool-checks label span { flex: none; font-size: 15px; }
+.home-app .home-route-content .tool-progress { color: var(--lab-muted); font-size: 11px; line-height: 1.6; margin-top: 12px; }
+.home-app .home-route-content .feedback-good { color: #42784b !important; font-size: 11px; }
+.home-app .home-route-content .feedback-bad { color: #a35a48 !important; }
+.home-app .home-route-content .input-label { min-width: 0; gap: 9px; margin-top: 0; color: var(--lab-muted); font-size: 12px; line-height: 1.6; }
+.home-app .home-route-content .input-label textarea { min-height: 110px; padding: 13px; border-color: var(--lab-line); border-radius: 9px; background: var(--lab-surface); color: var(--lab-text); font-size: 12px; line-height: 1.75; }
+.home-app .home-route-content textarea::placeholder,
+.home-app .home-route-content input::placeholder { color: #8a977e; opacity: 1; }
+.home-app .home-route-content .morphology-choices { gap: 6px; margin: 0; }
+.home-app .home-route-content .morphology-choices button { min-height: 33px; padding: 6px 9px; border-color: #d4dfc9; border-radius: 6px; background: #f4f7ed; color: var(--lab-green); font-size: 11px; }
+.home-app .home-route-content .morphology-choices button:hover { border-color: #a3bd90; background: #e8f0de; }
+.home-app .home-route-content .work-actions { gap: 10px; }
+.home-app .home-route-content .score-result { gap: 6px 12px; margin: 0; padding: 17px; border: 1px solid #ccdfc0; border-radius: 9px; background: #edf4e5; }
+.home-app .home-route-content .score-result span { color: #687c5d; font-size: 12px; }
+.home-app .home-route-content .score-result b { color: #426940; font-size: 26px; }
+.home-app .home-route-content .score-result small { color: #77856e; font-size: 10px; line-height: 1.6; }
+
+/* Work two: reading, questions, practice and observation table. */
+.home-app .home-route-content .lesson-two-title h1 { max-width: 900px; font-size: clamp(23px, 2.1vw, 29px); line-height: 1.5; }
+.home-app .home-route-content .lesson-two-title { display: block; }
+.home-app .home-route-content .lesson-two-title .lab-meta-tag { margin-top: 16px; }
+.home-app .home-route-content .lesson-two-objective { padding: 20px; gap: 13px; margin-bottom: 22px; border-color: #d1dfc5; border-radius: 11px; background: var(--lab-surface-soft); color: #69875a; }
+.home-app .home-route-content .lesson-two-objective b { color: var(--lab-text); font-size: 13px; }
+.home-app .home-route-content .lesson-two-objective p { margin-top: 8px; color: var(--lab-muted); font-size: 13px; line-height: 1.85; }
+.home-app .home-route-content .lesson-two-tabs { max-width: 100%; gap: 6px; margin: 0 0 22px; padding: 5px; border-color: var(--lab-line); border-radius: 9px; background: #edf1e7; overscroll-behavior-x: contain; scrollbar-width: thin; }
+.home-app .home-route-content .lesson-two-tabs button { min-height: 39px; padding: 8px 14px; border-radius: 6px; color: var(--lab-muted); font-size: 12px; line-height: 1.5; }
+.home-app .home-route-content .lesson-two-tabs button:hover { background: #f8faf2; color: var(--lab-green-strong); }
+.home-app .home-route-content .lesson-two-tabs button.active { border-color: #ccd9c0; background: var(--lab-surface); color: var(--lab-green-strong); box-shadow: 0 2px 6px #33462e06; }
+.home-app .home-route-content .lesson-two-grid { gap: 20px; }
+.home-app .home-route-content .lesson-two-card { min-width: 0; padding: 23px; border-color: var(--lab-line); border-radius: 12px; background: var(--lab-surface); box-shadow: none; }
+.home-app .home-route-content .lesson-two-card-head { gap: 11px; margin-bottom: 16px; }
+.home-app .home-route-content .lesson-two-card-head h2 { color: var(--lab-text); font-size: 15px; font-weight: 600; line-height: 1.6; }
+.home-app .home-route-content .lesson-icon { width: 34px; height: 34px; border: 1px solid #d9e4ce; border-radius: 8px; background: #edf3e5; color: #6d895c; font-size: 12px; }
+.home-app .home-route-content .lesson-two-card > p,
+.home-app .home-route-content .lesson-two-card > div > p { color: var(--lab-muted); font-size: 13px; line-height: 1.85; margin: 10px 0; }
+.home-app .home-route-content .lesson-safety { gap: 7px; margin-top: 18px; padding: 14px 16px; border-color: #e4d8b6; border-radius: 8px; background: #faf5e8; color: #7c6c45; font-size: 12px; line-height: 1.8; }
+.home-app .home-route-content .lesson-safety b { color: #7b622c; font-size: 12px; }
+.home-app .home-route-content .lesson-safety-wide { margin-top: 0; }
+.home-app .home-route-content .lesson-safety-wide svg { color: #ad8b44; }
+.home-app .home-route-content .bacteria-groups { gap: 10px; }
+.home-app .home-route-content .bacteria-group { border-color: var(--lab-line); border-radius: 8px; background: #f5f8ee; }
+.home-app .home-route-content .bacteria-group summary { padding: 14px; color: var(--lab-text); font-size: 12px; font-weight: 600; line-height: 1.65; }
+.home-app .home-route-content .bacteria-group summary svg { color: #8ba07d; }
+.home-app .home-route-content .bacteria-group > div { padding: 0 15px 14px; border-color: var(--lab-line); }
+.home-app .home-route-content .bacteria-group > div > b { margin-top: 13px; color: var(--lab-green); font-size: 12px; font-weight: 500; line-height: 1.8; }
+.home-app .home-route-content .bacteria-group > div p { color: var(--lab-muted); font-size: 12px; line-height: 1.85; }
+.home-app .home-route-content .lesson-caveat { color: #8a774c !important; font-size: 11px !important; }
+.home-app .home-route-content .lesson-question { border-color: var(--lab-line); }
+.home-app .home-route-content .lesson-question > button { gap: 12px; min-height: 61px; padding: 14px 0; color: var(--lab-text); }
+.home-app .home-route-content .lesson-question > button > span { width: 28px; height: 28px; border-radius: 7px; background: #edf2e5; color: var(--lab-green); font-size: 11px; }
+.home-app .home-route-content .lesson-question > button > b { font-size: 12px; font-weight: 600; line-height: 1.75; }
+.home-app .home-route-content .lesson-question > button > svg { color: #849b75; }
+.home-app .home-route-content .lesson-question > p { margin: 0 15px 17px 40px; color: var(--lab-muted); font-size: 12px; line-height: 1.85; }
+.home-app .home-route-content .smear-method { gap: 9px; margin: 18px 0; padding: 15px; border-left-color: #91a77b; border-radius: 0 8px 8px 0; background: #edf3e5; }
+.home-app .home-route-content .smear-method > b { color: var(--lab-green); font-size: 12px; line-height: 1.7; }
+.home-app .home-route-content .smear-method > span { color: var(--lab-muted); font-size: 12px; line-height: 1.85; }
+.home-app .home-route-content .lesson-steps { gap: 12px; margin: 20px 0; padding-left: 21px; color: var(--lab-muted); font-size: 12px; line-height: 1.8; }
+.home-app .home-route-content .shape-buttons { gap: 7px; margin-top: 18px; }
+.home-app .home-route-content .shape-buttons button { min-height: 37px; padding: 7px 11px; border-color: #d3dfc9; border-radius: 7px; background: #f6f8f0; color: var(--lab-muted); font-size: 11px; }
+.home-app .home-route-content .shape-buttons button:hover,
+.home-app .home-route-content .shape-buttons button.selected { border-color: #a4bd93; background: #e8f1de; color: var(--lab-green-strong); }
+.home-app .home-route-content .lesson-table-wrap { display: block; width: 100%; max-width: 100%; min-width: 0; overflow-x: auto; overscroll-behavior-x: contain; border-color: var(--lab-line); border-radius: 8px; scrollbar-width: thin; }
+.home-app .home-route-content .lesson-record-table { width: 100%; min-width: 850px; color: var(--lab-muted); font-size: 12px; }
+.home-app .home-route-content .lesson-record-table th { background: #edf2e6; color: var(--lab-green); font-size: 11px; font-weight: 600; }
+.home-app .home-route-content .lesson-record-table th,
+.home-app .home-route-content .lesson-record-table td { padding: 14px; border-color: var(--lab-line); line-height: 1.8; }
+.home-app .home-route-content .lesson-record-table input { min-width: 145px; min-height: 39px; padding: 9px; border-color: #d1dec6; border-radius: 6px; background: var(--lab-surface); color: var(--lab-text); font-size: 12px; }
+.home-app .home-route-content .lesson-record-table input:focus { border-color: #91ad7b; }
+.home-app .home-route-content .record-progress { gap: 12px; margin-top: 16px; color: var(--lab-muted); font-size: 11px; line-height: 1.65; }
+.home-app .home-route-content .lesson-two-bottom { gap: 15px; padding-top: 22px; margin-top: 22px; border-top: 1px solid var(--lab-line); }
+.home-app .home-route-content .lesson-two-bottom > span { color: var(--lab-muted); font-size: 11px; line-height: 1.6; }
+.home-app .home-route-content .lesson-two-bottom > span svg { color: #83a06d; }
+
+/* Task sheets and the existing learning assistant. */
+.home-app .quick-page { min-height: calc(100vh - 78px); padding: 31px clamp(18px, 3vw, 48px) 48px; background: var(--lab-bg); color: var(--lab-text); }
+.home-app .quick-page-heading { gap: 17px; margin-bottom: 28px; align-items: flex-start; }
+.home-app .quick-page-icon { width: 51px; height: 51px; flex: none; border: 1px solid #d6e2ca; border-radius: 12px; background: #e8f0df; color: #6d8a5a; }
+.home-app .quick-page-heading h1 { margin: 9px 0 12px; color: var(--lab-text); font: 600 clamp(26px, 2.6vw, 36px)/1.3 'Manrope', sans-serif; letter-spacing: -.7px; }
+.home-app .quick-page-heading p { max-width: 700px; color: var(--lab-muted); font-size: 13px; line-height: 1.8; }
+.home-app .quick-task-list { max-width: 1100px; gap: 17px; }
+.home-app .quick-task-card,
+.home-app .quick-assistant-card { max-width: 1100px; min-width: 0; gap: 23px; padding: 25px; border: 1px solid var(--lab-line); border-radius: 12px; background: var(--lab-surface); box-shadow: none; }
+.home-app .quick-task-number { width: 44px; height: 52px; border: 1px solid #d8e1cf; border-radius: 7px; background: #edf2e6; color: #6b845b; font: 500 19px Georgia, serif; }
+.home-app .quick-task-copy { min-width: 0; }
+.home-app .quick-task-copy small { color: #7c8e70; font-size: 10px; line-height: 1.7; letter-spacing: .8px; }
+.home-app .quick-task-copy h2,
+.home-app .quick-assistant-card h2 { margin: 10px 0 9px; color: var(--lab-text); font-size: 19px; font-weight: 600; line-height: 1.6; }
+.home-app .quick-task-copy p,
+.home-app .quick-assistant-card p { color: var(--lab-muted); font-size: 13px; line-height: 1.8; }
+.home-app .quick-task-card .rail-cta { flex: none; width: auto; min-width: 150px; height: auto; margin: 0; padding: 11px 14px; }
+.home-app .quick-assistant-card { max-width: 1000px; padding: 30px; gap: 23px; }
+.home-app .assistant-glow { width: 62px; height: 62px; border: 1px solid #cfddc1; border-radius: 14px; background: #e8f0dd; color: #76905e; }
+.home-app .quick-actions { gap: 10px; margin-top: 24px; }
+.home-app .quick-actions .rail-cta,
+.home-app .quick-actions .outline-button { width: auto; min-height: 42px; height: auto; padding: 11px 15px; }
+
+.home-app .header-popover { border-color: var(--lab-line); border-radius: 10px; background: var(--lab-surface); color: var(--lab-text); box-shadow: 0 15px 40px #29432712; }
+.home-app .header-popover p { color: var(--lab-muted); }
+.home-app .header-popover button { color: var(--lab-green); }
+
+@media (max-width: 1100px) {
+ .home-app .home-route-content .experiment-grid { grid-template-columns: minmax(0, 1fr); }
+ .home-app .home-route-content .experiment-aside { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
+ .home-app .home-route-content .experiment-aside > .theory-card { grid-column: 1 / -1; }
+ .home-app .home-route-content .experiment-aside > .work-actions,
+ .home-app .home-route-content .experiment-aside > .score-result { grid-column: 1 / -1; }
+ .home-app .home-route-content .scope-workspace { grid-template-columns: minmax(0, 1fr); }
+ .home-app .home-route-content .scope-controls { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
+ .home-app .home-route-content .sample-note { grid-column: 1 / -1; }
+ .home-app .home-route-content .lesson-two-grid { grid-template-columns: minmax(0, 1fr); }
+ .home-app .quick-task-card { flex-wrap: wrap; gap: 16px; }
+ .home-app .quick-task-copy { min-width: calc(100% - 70px); }
+ .home-app .quick-task-card .rail-cta { margin-left: 60px; }
+}
+@media (max-width: 760px) {
+ .home-app .home-route-content,
+ .home-app .quick-page { padding: 23px 15px 35px; }
+ .home-app .quick-page { min-height: calc(100vh - 62px); }
+ .home-app .home-route-content .content-page { margin-bottom: 10px; }
+ .home-app .home-route-content .page-title { display: block; margin-bottom: 22px; }
+ .home-app .home-route-content .page-title h1 { font-size: 25px; line-height: 1.45; letter-spacing: -.6px; }
+ .home-app .home-route-content .lab-meta-tag { margin-top: 14px; }
+ .home-app .home-route-content .lab1-card { grid-template-columns: 150px minmax(0, 1fr); }
+ .home-app .home-route-content .lab1-card .course-visual { min-height: 220px; }
+ .home-app .home-route-content .lab1-card .course-body { padding: 20px; }
+ .home-app .home-route-content .course-body h3 { font-size: 17px; }
+ .home-app .home-route-content .scope-window { height: 350px; }
+ .home-app .home-route-content .experiment-card,
+ .home-app .home-route-content .question-card,
+ .home-app .home-route-content .theory-card,
+ .home-app .home-route-content .lesson-two-card { padding: 19px; }
+ .home-app .home-route-content .lesson-two-tabs button { font-size: 11px; }
+ .home-app .home-route-content .lesson-two-title h1 { font-size: 24px; }
+ .home-app .home-route-content .lesson-two-bottom { flex-wrap: wrap; }
+ .home-app .home-route-content .lesson-two-bottom > span { width: 100%; order: 3; justify-content: center; }
+ .home-app .home-route-content .lesson-two-bottom > button { flex: 1; justify-content: center; }
+ .home-app .quick-assistant-card { padding: 24px; }
+ .home-app .quick-page-heading p { font-size: 12px; }
+}
+@media (max-width: 520px) {
+ .home-app .home-route-content,
+ .home-app .quick-page { padding-right: 13px; padding-left: 13px; }
+ .home-app .home-route-content .lab1-card { display: flex; flex-direction: column; }
+ .home-app .home-route-content .lab1-card .course-visual { min-height: 145px; height: 145px; }
+ .home-app .home-route-content .course-visual::before { width: 60px; height: 77px; }
+ .home-app .home-route-content .course-visual-icon { font-size: 26px; }
+ .home-app .home-route-content .course-subtitle { font-size: 8px; }
+ .home-app .home-route-content .lab1-card .course-body { padding: 20px; }
+ .home-app .home-route-content .course-body h3 { font-size: 18px; margin-top: 14px; }
+ .home-app .home-route-content .scope-controls,
+ .home-app .home-route-content .experiment-aside { display: flex; flex-direction: column; }
+ .home-app .home-route-content .scope-controls > *,
+ .home-app .home-route-content .experiment-aside > * { width: 100%; }
+ .home-app .home-route-content .scope-view,
+ .home-app .home-route-content .control-box { padding: 16px; }
+ .home-app .home-route-content .scope-top { align-items: flex-start; }
+ .home-app .home-route-content .scope-top small { font-size: 8px; }
+ .home-app .home-route-content .scope-top strong { font-size: 20px; }
+ .home-app .home-route-content .scope-window { height: 300px; }
+ .home-app .home-route-content .experiment-card,
+ .home-app .home-route-content .question-card,
+ .home-app .home-route-content .theory-card,
+ .home-app .home-route-content .lesson-two-card { padding: 17px; }
+ .home-app .home-route-content .safety-card,
+ .home-app .home-route-content .lesson-two-objective { padding: 16px; }
+ .home-app .home-route-content .experiment-card-body { display: block; padding: 22px 0; }
+ .home-app .home-route-content .large-step-icon { margin-bottom: 16px; }
+ .home-app .home-route-content .experiment-card-body h2 { font-size: 18px; }
+ .home-app .home-route-content .experiment-card-foot { flex-direction: column; align-items: stretch; gap: 10px; }
+ .home-app .home-route-content .experiment-card-foot > span:empty { display: none; }
+ .home-app .home-route-content .experiment-card-foot > .primary-button { width: 100%; }
+ .home-app .home-route-content .question-foot { align-items: stretch; flex-direction: column; }
+ .home-app .home-route-content .question-foot .outline-button { justify-content: center; }
+ .home-app .home-route-content .lab-tool-checks { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+ .home-app .home-route-content .lab-tool-checks label { font-size: 11px; padding: 8px; gap: 5px; }
+ .home-app .home-route-content .lab-tool-checks label span { display: none; }
+ .home-app .home-route-content .lesson-two-title h1 { font-size: 23px; }
+ .home-app .home-route-content .lesson-two-objective { gap: 9px; }
+ .home-app .home-route-content .lesson-two-objective p { font-size: 12px; }
+ .home-app .home-route-content .lesson-two-card-head { align-items: flex-start; }
+ .home-app .home-route-content .lesson-two-card-head h2 { font-size: 14px; }
+ .home-app .home-route-content .lesson-two-tabs { margin-bottom: 16px; }
+ .home-app .home-route-content .lesson-question > p { margin-left: 0; }
+ .home-app .home-route-content .lesson-question > button { gap: 9px; }
+ .home-app .home-route-content .record-progress { flex-direction: column; }
+ .home-app .home-route-content .lesson-two-bottom { gap: 10px; }
+ .home-app .home-route-content .lesson-two-bottom > button { padding: 9px; font-size: 11px; }
+ .home-app .quick-page-heading { gap: 12px; }
+ .home-app .quick-page-icon { width: 43px; height: 43px; border-radius: 10px; }
+ .home-app .quick-page-heading h1 { font-size: 27px; margin-top: 7px; }
+ .home-app .quick-task-card { padding: 20px; gap: 14px; }
+ .home-app .quick-task-number { width: 39px; height: 43px; }
+ .home-app .quick-task-copy { min-width: calc(100% - 56px); }
+ .home-app .quick-task-copy h2 { font-size: 17px; }
+ .home-app .quick-task-card .rail-cta { width: 100%; margin-left: 0; }
+ .home-app .quick-assistant-card { flex-direction: column; gap: 14px; padding: 22px; }
+ .home-app .assistant-glow { width: 49px; height: 49px; border-radius: 12px; }
+ .home-app .assistant-glow svg { width: 28px; height: 28px; }
+ .home-app .quick-assistant-card h2 { font-size: 20px; }
+ .home-app .quick-actions { flex-direction: column; }
+ .home-app .quick-actions > button { width: 100%; justify-content: center; }
+}
+@media (max-width: 350px) {
+ .home-app .home-route-content .lab-tool-checks { grid-template-columns: minmax(0, 1fr); }
+ .home-app .home-route-content .lesson-two-bottom { flex-direction: column; align-items: stretch; }
+ .home-app .home-route-content .lesson-two-bottom > span { order: 0; }
+ .home-app .home-route-content .scope-top { gap: 8px; }
+ .home-app .home-route-content .scope-window { height: 270px; }
+ .home-app .home-route-content .scope-view { padding: 12px; }
+ .home-app .home-route-content .page-title h1 { font-size: 23px; }
+ .home-app .quick-page-heading { gap: 9px; }
+ .home-app .quick-page-heading h1 { font-size: 24px; }
+ .home-app .quick-page-heading .kicker { font-size: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .home-app .home-route-content button,
+ .home-app .home-route-content summary svg,
+ .home-app .quick-page button { transition: none; }
+ .home-app .home-route-content .lab1-card:hover { transform: none; }
+}
+
+/* Shared application chrome: keep hover and focus states in the same palette. */
+.home-app .topbar-back-home { border-color: #d8e2d0; background: #f5f8ee; color: #587650; }
+.home-app .topbar-back-home:hover { border-color: #adbf9e; background: #eaf1e0; color: var(--lab-green-strong); transform: none; }
+.home-app .home-search { color: #7c8f70; }
+.home-app .home-search:focus-within { border-color: #a8bd96; box-shadow: 0 0 0 3px #9ab27d1f; }
+.home-app .home-search input { color: var(--lab-text); }
+.home-app .home-search input::placeholder { color: #8a977e; }
+.home-app .home-search > button { background: #e2ead9; color: #547247; }
+.home-app .home-search > button:hover { background: #d7e3cb; }
+.home-app .home-icon-button,
+.home-app .home-profile-button { color: #647d56; }
+.home-app .home-icon-button.selected,
+.home-app .home-profile-button:hover { color: var(--lab-green-strong); }
+.home-app .home-profile-button { border-color: #dbe4d1; background: #f0f5e8; }
+.home-app .home-profile-button > span { background: #e3ecd8; color: #56744a; }
+.home-app .home-profile-button:hover { border-color: #bdceb0; background: #eaf1e0; }
+.home-app .workspace-language { border-color: #dbe4d1; background: #edf2e5; }
+.home-app .workspace-language button { color: #6c805e; }
+.home-app .workspace-language button[aria-pressed=true] { color: #355a38; background: var(--lab-surface); }
+.home-app button:focus-visible,
+.home-app input:focus-visible,
+.home-app textarea:focus-visible,
+.home-app summary:focus-visible { outline-color: #72955c; }
+.home-app input[type=checkbox],
+.home-app input[type=range] { accent-color: var(--lab-green); }
+
+/* Use the installed interface face when optional web fonts are unavailable. */
+.home-app h1,
+.home-app h2,
+.home-app h3,
+.home-app h4,
+.home-app .home-route-content .page-title h1,
+.home-app .home-route-content .scope-headline h1,
+.home-app .home-route-content .course-body h3,
+.home-app .home-route-content .experiment-card-body h2,
+.home-app .home-route-content .question-card h3,
+.home-app .home-route-content .lesson-two-card-head h2,
+.home-app .quick-page-heading h1,
+.home-app .home-route-content .scope-top strong { font-family: Arial, sans-serif; }
+.home-app .home-route-content .info-heading { color: var(--lab-text); border-color: var(--lab-line); }
